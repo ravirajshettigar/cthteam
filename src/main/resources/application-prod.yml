@@ -1,0 +1,27 @@
+spring:
+  profiles: 'prod'
+  main:
+        banner-mode: 'OFF'
+  datasource:
+      url: 'jdbc:mysql://localhost:4928/cthteam'
+      username: 'root'
+      password: 'root'
+      driver-class-name: 'com.mysql.jdbc.Driver'
+      tomcat:
+        max-wait: 10000
+        max-active: 50
+        test-on-borrow: true
+  jpa:
+      show-sql: true
+      database-platform: 'org.hibernate.dialect.MySQL5InnoDBDialect'
+      hibernate:
+        ddl-auto: 'validate'
+server:
+  port: 9090
+  context-path: '/teamwork'
+debug: false
+logging:
+  level:
+    .: 'error'
+    org.springframework: 'ERROR'
+    com.mkyong: 'ERROR'
