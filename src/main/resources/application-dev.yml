@@ -3,17 +3,17 @@ spring:
   main:
       banner-mode: 'CONSOLE'
   datasource:
-      url: 'jdbc:mysql://localhost:4928/cthteam'
-      username: 'root'
-      password: 'root'
-      driver-class-name: 'com.mysql.jdbc.Driver'
+      url: 'jdbc:mysql://localhost:1433/cthteam'
+      username: 'sa'
+      password: 'Password_123'
+      driver-class-name: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
       tomcat:
         max-wait: 10000
         max-active: 50
         test-on-borrow: true
   jpa:
       show-sql: true
-      database-platform: 'org.hibernate.dialect.MySQL5InnoDBDialect'
+      database-platform: 'org.hibernate.dialect.SQLServer2008Dialect'
       hibernate:
         ddl-auto: 'create'
 server:
